@@ -1,0 +1,238 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="usage" xml:space="preserve">
+    <value>Send a Growl notification to a local or remote host
+
+growlnotify [/t:title] [/id:id] [/s:sticky] [/p:priority] [/i:icon] [/c:coalescingid]
+            [/a:application] [/ai:icon] [/r:type] [/n:type]
+            [/cu:callbackurl]
+            [/host:host] [/port:port]
+            [/pass:password] [/enc:algorithm] [/hash:algorithm]
+            [/silent:nooutput]
+            messagetext
+
+  [/t:title]            The notification title.
+                        Use \n to specify a line break. 
+                        Use \\n for a literal '\n'.
+                        Default: "growlnotify"
+
+  [/id:id]              The notification id.
+                        Default: ""
+
+  [/s:sticky]           Indicates if the notification should be sticky.
+                        Valid values: true|false
+                        Default: false
+
+  [/p:priority]         The notification priority.
+                        Valid values: -2|-1|0|1|2
+                        Default: 0
+
+  [/i:icon]             The icon to show for the notification.
+                        Must be a valid file type (png, jpg, gif, ico).
+                        Can be any of the following:
+                          - absolute url (http://domain/image.png)
+                          - absolute file path (c:\temp\image.png)
+                          - relative file path (.\folder\image.png) (relative 
+                            file paths must start with a dot (.) and are 
+                            relative to growlnotify's location
+                        Note: Icons specified as urls will be passed as urls 
+                              (links). Icons specified as local files (either 
+                              absolute or relative) will be sent as binary 
+                              data.
+                        Default: no icon
+
+  [/c:coalescingid]     The coalescing id used to update/replace existing
+                        notifications.
+
+  [/a:application]      The name of the application sending the notification.
+                        The application must already be registered unless the
+                        /r switch is included. The default 'growlnotify'
+                        application does not need to be explicitly registered.
+                        Default: growlnotify
+
+  [/ai:appicon]			The icon of the application being registered.
+						Only applicable if the /r switch is also passed.
+                        Must be a valid file type (png, jpg, gif, ico).
+                        Can be any of the following:
+                          - absolute url (http://domain/image.png)
+                          - absolute file path (c:\temp\image.png)
+                          - relative file path (.\folder\image.png) (relative 
+                            file paths must start with a dot (.) and are 
+                            relative to growlnotify's location
+                        Note: Icons specified as urls will be passed as urls 
+                              (links). Icons specified as local files (either 
+                              absolute or relative) will be sent as binary 
+                              data.
+                        Default: no icon
+
+  [/r:type]             Register the application first.
+                        'types' is a comma-separated list of the notification 
+                        types to register.
+                        Default: application not automatically registered
+                        Examples:
+                            /r:"Some Notification"
+                            /r:"Notification One","Notification Two","Notification Three"
+
+  [/n:type]             The notification name/type.
+                        Default: "General Notification"
+
+  [/cu:callbackurl]     A callback url (will be opened if the notification is 
+                        clicked).
+                        Default: no callback
+
+  [/host:host]          The host address to send the notification to.
+                        If any value other than 'localhost' or '127.0.0.1' is 
+                        provided, the host is considered a remote host and the 
+                        /pass switch must also be provided.
+                        Default: localhost
+
+  [/port:port]          The port to send the notification to.
+                        Default: 23053
+
+  [/pass:password]      The password required to send notifications.
+                        A password is required to send a request to a remote 
+                        host. If /host is specified and is any value other than
+                        'localhost' or '127.0.0.1', then /pass is also 
+                        required.
+                        Default: no password
+
+  [/enc:algorithm]      The encryption algorithm to use.
+                        Valid values: NONE|DES|3DES|AES
+                        If a value other than NONE is provided, the
+                        /pass and /hash switches must also be included.
+                        Default: NONE
+
+  [/hash:algorithm]     The hashing algorithm to use.
+                        Valid values: MD5|SHA1|SHA256|SHA512
+                        This value is only used if the /pass switch is also
+                        set.
+                        Default: MD5
+
+  [/silent:nooutput]	When run from the command line, indicates if response 
+                        output should be suppressed or not.
+                        Valid values: true|false
+                        Default: false
+
+  messagetext			The notification's text - Required
+                        Use \n to specify a line break. 
+                        Use \\n for a literal '\n'.
+</value>
+  </data>
+</root>

@@ -31,3 +31,4 @@ _ReSharper*/
 *.docstates
 */packages/**/*
 !repositories.config
+!growlnotify.exe
