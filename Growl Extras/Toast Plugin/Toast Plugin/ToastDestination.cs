@@ -3,6 +3,7 @@ using System;
 using System.Collections.Generic;
 using Growl.Connector;
 using DesktopToast;
+using System.IO;
 
 namespace Toast_Plugin
 {
@@ -42,10 +43,17 @@ namespace Toast_Plugin
 
         public override void ForwardNotification(Notification notification, CallbackContext callbackContext, RequestInfo requestInfo, bool isIdle, ForwardedNotificationCallbackHandler callbackFunction)
         {
+            var shortcutFilePath = Path.Combine(
+                Environment.GetFolderPath(Environment.Is64BitOperatingSystem ? Environment.SpecialFolder.ProgramFilesX86 : Environment.SpecialFolder.ProgramFiles),
+                "Growl for Windows",
+                "Growl.exe");
+
             var request = new ToastRequest
             {
                 ToastTitle = notification.Title,
                 ToastBody = notification.Text,
+                ShortcutFileName = "Growl.lnk",
+                ShortcutTargetFilePath = shortcutFilePath,
                 AppId = this.Description
             };
 
